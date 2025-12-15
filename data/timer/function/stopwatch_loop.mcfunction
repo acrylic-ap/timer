@@ -1,0 +1,1 @@
+scoreboard players add @e[type=block_display,tag=timer] timer_time 1

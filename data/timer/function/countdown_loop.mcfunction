@@ -1,0 +1,1 @@
+scoreboard players remove @e[type=block_display,tag=timer] timer_time 1
