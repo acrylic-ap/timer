@@ -7,3 +7,4 @@ scoreboard players set @e[type=block_display,tag=timer] sixty 60
 scoreboard players set @e[type=block_display,tag=timer] twenty 20
 scoreboard players set @e[type=block_display,tag=timer] timer_display_result 1
 scoreboard players set @e[type=block_display,tag=timer] element_timer_time 600
+scoreboard players set @e[type=block_display,tag=timer] target_timer_time 600

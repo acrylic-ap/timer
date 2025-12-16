@@ -97,6 +97,24 @@
       "end": 59,
       "step": 1,
       "initial": 30
+    },
+    {
+      "type": "minecraft:number_range",
+      "key": "minutes",
+      "label": "스톱워치 목표 분 설정(이내)",
+      "start": 0,
+      "end": 60,
+      "step": 1,
+      "initial": 0
+    },
+    {
+      "type": "minecraft:number_range",
+      "key": "seconds",
+      "label": "스톱워치 목표 초 설정(이내)",
+      "start": 0,
+      "end": 59,
+      "step": 1,
+      "initial": 30
     }
   ],
    "yes": {
