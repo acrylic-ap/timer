@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:notice",
+  "type": "minecraft:confirmation",
   "title": "설정",
   "inputs": [
     {
@@ -23,6 +23,60 @@
       "max_length": 60
     },
     {
+      "type": "minecraft:single_option",
+      "key": "passed_sound",
+      "label": "통과 시 종료음",
+      "options": [
+        {
+          "id": "0",
+          "display": "없음"
+        },
+        {
+          "id": "1",
+          "display": "업적 달성음"
+        },
+        {
+          "id": "2",
+          "display": "드래곤 사망음"
+        },
+        {
+          "id": "3",
+          "display": "레벨 업 효과음"
+        },
+        {
+          "id": "4",
+          "display": "랜덤(작동 후 효과음 고정)"
+        }
+      ]
+    },
+    {
+      "type": "minecraft:single_option",
+      "key": "failed_sound",
+      "label": "불통과 시 종료음",
+      "options": [
+        {
+          "id": "0",
+          "display": "없음"
+        },
+        {
+          "id": "1",
+          "display": "동굴 효과음"
+        },
+        {
+          "id": "2",
+          "display": "디스크 11번"
+        },
+        {
+          "id": "3",
+          "display": "디스크 13번"
+        },
+        {
+          "id": "4",
+          "display": "랜덤(작동 후 효과음 고정)"
+        }
+      ]
+    },
+    {
       "type": "minecraft:number_range",
       "key": "minutes",
       "label": "타이머 분 설정",
@@ -41,11 +95,14 @@
       "initial": 30
     }
   ],
-  "action": {
+   "yes": {
     "label": "확인",
     "action": {
-      "type": "dynamic/run_command",
-      "template": "function timer:apply_settings {seconds: $(seconds), minutes: $(minutes), is_result_message: $(is_result_message), message: \"$(message)\", actionbar_message: \"$(actionbar_message)\"}"
+      "type": "minecraft:dynamic/run_command",
+      "template": "function timer:apply_settings {seconds: $(seconds), minutes: $(minutes), is_result_message: $(is_result_message), message: \"$(message)\", actionbar_message: \"$(actionbar_message)\", passed_sound: $(passed_sound), failed_sound: $(failed_sound)}"
     }
+  },
+  "no": {
+    "label": "취소"
   }
 }

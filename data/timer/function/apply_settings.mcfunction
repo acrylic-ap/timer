@@ -6,3 +6,6 @@ execute as @e[type=block_display, tag=timer] at @s run scoreboard players operat
 $scoreboard players set @e[type=block_display, tag=timer] timer_display_result $(is_result_message)
 $data modify storage minecraft:title_message format set value {text:"$(message)"}
 $data modify storage minecraft:actionbar_message format set value {text:"$(actionbar_message)"}
+
+$scoreboard players set @e[type=block_display, tag=timer] passed_sound $(passed_sound)
+$scoreboard players set @e[type=block_display, tag=timer] failed_sound $(failed_sound)
