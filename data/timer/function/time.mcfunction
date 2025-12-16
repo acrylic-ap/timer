@@ -6,7 +6,7 @@ execute as @e[type=block_display,tag=timer,limit=1] at @s run scoreboard players
 execute as @e[type=block_display,tag=timer,limit=1] at @s run scoreboard players operation @s timer_time_by_minute /= @s sixty
 
 # 시간 초과
-execute as @e[type=block_display,tag=timer,limit=1] at @s run execute if entity @s[scores={timer_start=1, timer_time=..0}] run function timer:stop
+execute as @e[type=block_display,tag=timer,limit=1] at @s run execute if entity @s[scores={timer_start=1, timer_type=1, timer_time=..0}] run function timer:stop
 
 # 타이머
 execute as @e[type=block_display,tag=timer,limit=1] at @s run execute if entity @s[scores={timer_start=1, timer_type=1}] run function timer:countdown_loop
