@@ -7,3 +7,4 @@ scoreboard objectives add twenty dummy
 scoreboard objectives add timer_start dummy
 scoreboard objectives add timer_type dummy
 scoreboard objectives add timer_display_result dummy
+scoreboard objectives add element_timer_time dummy

@@ -1,5 +1,5 @@
 scoreboard players set @e[type=block_display,tag=timer] timer_start 0
-execute as @e[type=block_display,tag=timer] at @s run execute if entity @s[scores={timer_display_result=1, timer_type=1, timer_time=0}] run title @a title "실패!"
-execute as @e[type=block_display,tag=timer] at @s run execute if entity @s[scores={timer_display_result=1, timer_type=1, timer_time=0}] run title @a title "엌ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+execute as @e[type=block_display,tag=timer] at @s run execute if entity @s[scores={timer_type=1, timer_time=..0}] run title @a title [{storage:"minecraft:title_message",nbt:"format",interpret:true}]
+execute as @e[type=block_display,tag=timer] at @s run execute if entity @s[scores={timer_type=1, timer_time=..0}] run title @a actionbar [{storage:"minecraft:actionbar_message",nbt:"format",interpret:true}]
 execute as @e[type=block_display,tag=timer] at @s run execute if entity @s[scores={timer_display_result=1, timer_type=1, timer_time=1..}] run title @a title ["남은 시간: ",{"score":{"name":"@s","objective":"timer_time_by_minute"}},"분 ",{"score":{"name":"@s","objective":"timer_time_by_second"}}, "초"]
 execute as @e[type=block_display,tag=timer] at @s run execute if entity @s[scores={timer_display_result=1, timer_type=2}] run title @a title ["걸린 시간: ",{"score":{"name":"@s","objective":"timer_time_by_minute"}},"분 ",{"score":{"name":"@s","objective":"timer_time_by_second"}}, "초"]

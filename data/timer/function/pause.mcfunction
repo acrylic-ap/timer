@@ -1,0 +1,1 @@
+scoreboard players set @e[type=block_display,tag=timer] timer_start 0

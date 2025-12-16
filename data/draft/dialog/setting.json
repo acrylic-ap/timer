@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:notice",
+  "title": "설정",
+  "inputs": [
+    {
+      "type": "minecraft:boolean",
+      "key": "is_result_message",
+      "label": "결과 메시지 띄우기",
+      "initial": true
+    },
+    {
+      "type": "minecraft:text",
+      "key": "message",
+      "label": "시간 초과 타이틀 설정",
+      "initial": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
+      "max_length": 14
+    },
+    {
+      "type": "minecraft:text",
+      "key": "actionbar_message",
+      "label": "시간 초과 액션 바 설정",
+      "initial": "Time Over!",
+      "max_length": 60
+    },
+    {
+      "type": "minecraft:number_range",
+      "key": "minutes",
+      "label": "타이머 분 설정",
+      "start": 0,
+      "end": 60,
+      "step": 1,
+      "initial": 0
+    },
+    {
+      "type": "minecraft:number_range",
+      "key": "seconds",
+      "label": "타이머 초 설정",
+      "start": 0,
+      "end": 59,
+      "step": 1,
+      "initial": 30
+    }
+  ],
+  "action": {
+    "label": "확인",
+    "action": {
+      "type": "dynamic/run_command",
+      "template": "function timer:apply_settings {seconds: $(seconds), minutes: $(minutes), is_result_message: $(is_result_message), message: \"$(message)\", actionbar_message: \"$(actionbar_message)\"}"
+    }
+  }
+}
